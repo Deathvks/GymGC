@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/suggestions.css">
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Sugerencias</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">GymGC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Gimnasio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="material.html">Material</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="activities.html">Actividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rooms.html">Salas</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="schedule-and-price.html">Horario y precio</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="alert">
+        <div class="alert alert-warning">
+            <div id="close"> <i class="fa-solid fa-xmark"></i></div>
+            <strong>¡Atención!:</strong> Las ideas que pongas aquí serán procesadas
+            por nuestro personal, rogamos escriba cosas serias.
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div>
+                <p class="left-side">Recomienda cualquier tipo de cosa que quieras que esté en nuestro gimnasio y que no
+                    hayas leído que esté.
+                </p>
+            </div>
+            <div id="form-suggestion">
+                <div class="left-side">
+                    <form id="gym-form" action="suggestions.html">
+                        <div class="mb-3 mt-3">
+                            <label for="whatever" class="form-label">Escribe lo que se te ocurra:</label>
+                                <textarea id="whatever" name="whatever" style="width: 100%;" name="" id="" cols="30" rows="8" placeholder="Escribe cualquier sugerencia"></textarea>
+                                <div id="error-whatever" class="text-danger d-none">El campo de sugerencias está vacío. Por favor, escriba algo.</div>
+                            </div>
+                            <div class="form-check mb-3">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" name="remember" /> Acepto los términos
+                                    <div id="error-check" class="text-danger d-none">Debes aceptar los términos para continuar.</div>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <div class="left-side">
+                        <h2>Recuento de Ideas:</h2>
+                        <ul id="gym-list">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/gym-manager.js"></script>
+    <script src="https://kit.fontawesome.com/abeb2ec600.js" crossorigin="anonymous"></script>
+    <script src="js/side-warning.js"></script>
+
+</body>
+
+</html>

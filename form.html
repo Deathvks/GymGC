@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario</title>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="img/icon.png" />
+  <link rel="stylesheet" href="css/form.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">GymGC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Gimnasio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="material.html">Material</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="activities.html">Actividades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rooms.html">Salas</a>
+          <li class="nav-item">
+            <a class="nav-link" href="schedule-and-price.html">Horario y precio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="suggestions.html">Sugerencias</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="alert">
+    <div class="alert alert-warning">
+      <div id="close"> <i class="fa-solid fa-xmark"></i></div>
+      <strong>¡Atención!:</strong> La contraseña que escribas en este
+      formulario no será guardada en nuestra base de datos. Solo guardaremos
+      el email por si tienes que recuperarlo en caso de olvido.
+    </div>
+  </div>
+
+  <div id="login">
+    <form>
+      <div class="mb-3">
+        <label for="user" class="form-label">Nombre de Usuario:</label>
+        <input type="text" class="form-control" id="username" placeholder="Escribe un nombre de usuario"
+          name="username" />
+          <div id="error-user" class="text-danger d-none">El nombre de usuario es obligatorio</div>
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Escribe un email" name="email" />
+        <div id="error-email" class="text-danger d-none">El email no es válido</div>
+      </div>
+      <div class="mb-3">
+        <label for="pwd" class="form-label">Contraseña:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Escribe una contraseña" name="pswd" />
+        <div id="error-pwd" class="text-danger d-none">La contraseña es obligatoria</div>
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="loc" class="form-label">Localidad:</label>
+        <input type="text" class="form-control" id="location" placeholder="Escribe tu localidad" name="location" />
+        <div id="error-loc" class="text-danger d-none">La localidad es obligatoria</div>
+      </div>
+      <div class="form-check mb-3">
+        <label class="form-check-label">
+          <br>
+          <input class="form-check-input" type="checkbox" name="remember" /> Recuérdame
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary" name="submit">Registrarse</button>
+  </div>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/abeb2ec600.js" crossorigin="anonymous"></script>
+  <script src="js/side-warning.js"></script>
+  <script src="js/form-validation.js"></script>
+</body>
+
+</html>
