@@ -22,14 +22,16 @@ body {
         background-color: rgb(36, 100, 160);
         top: 0px;
     }
-    
+
     #header i {
         margin-top: 1.2em;
         margin-left: 1em;
         color: white;
     }
-    
+
     #side-menu {
+        top: 0;
+        transition: left 0.3s ease;
         position: fixed;
         z-index: 10000;
         width: 40%;
@@ -37,13 +39,25 @@ body {
         background-color: rgb(36, 100, 160);
         visibility: hidden;
     }
-    
+
     #side-menu i {
         margin-top: 1em;
         margin-left: 1em;
         color: white;
     }
-    
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent dark background */
+        display: none;
+        /* By default hidden */
+    }
+
     #h1-menu {
         margin-top: 1em;
         margin-left: 1em;
@@ -52,7 +66,7 @@ body {
         font-family: Arial, Helvetica, sans-serif;
     }
 
-    
+
     #h1-menu1 {
         margin-top: 1em;
         margin-left: 1em;
@@ -60,7 +74,7 @@ body {
         font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
     }
-    
+
     #h1-menu2 {
         margin-top: 1em;
         margin-left: 1em;
@@ -68,11 +82,27 @@ body {
         font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
     }
-    
+
     #h1-menu3 {
         margin-top: 1em;
         margin-left: 1em;
         color: white;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #h1-menu4 {
+        margin-top: 1em;
+        margin-left: 1em;
+        color: white;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #login {
+        margin-top: 1em;
+        margin-left: 1em;
+        color: rgb(0, 140, 255);
         font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -84,16 +114,16 @@ body {
         font-size: 12px;
         font-family: Arial, Helvetica, sans-serif;
     }
-    
+
     a {
         text-decoration: none;
         color: inherit;
     }
-    
+
     a:hover {
         color: rgb(0, 0, 0);
     }
-    
+
     .image-and-text {
         margin-top: 5em;
         width: 100%;
@@ -102,13 +132,13 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .text-image {
         flex: 1;
         margin: 0px 20px;
         text-align: center;
     }
-    
+
     .image-and-text img {
         margin-top: 1em;
         width: 100%;
@@ -117,42 +147,42 @@ body {
         box-shadow: 0 0 6px rgba(0, 0, 0, .5);
         border-radius: 5px;
     }
-    
+
     .img-gym {
         width: 60vw;
         height: 50vw;
         max-width: 1024px;
         margin: 0px 40px;
     }
-    
-    .image-and-text h1{
+
+    .image-and-text h1 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 15px;
         font-weight: bold;
         color: rgb(0, 140, 255);
     }
-    
-    .image-and-text .text-image h2{
+
+    .image-and-text .text-image h2 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 14px;
     }
-    
+
     .image-and-text2 {
-        margin-top: 17em;
+        margin-top: 15em;
         width: 100%;
         height: 30vw;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 19em;
+        margin-bottom: 19.5em;
     }
-    
+
     .text-image-below {
         flex: 1;
         margin: 0px 20px;
         text-align: center;
     }
-    
+
     .image-and-text2 img {
         margin-top: 1em;
         width: 100%;
@@ -161,22 +191,22 @@ body {
         box-shadow: 0 0 6px rgba(0, 0, 0, .5);
         border-radius: 5px;
     }
-    
+
     .img-gym2 {
         width: 60vw;
         height: 50vw;
         max-width: 1024px;
         margin: 0px 40px;
     }
-    
-    .image-and-text2 h1{
+
+    .image-and-text2 h1 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 15px;
         font-weight: bold;
         color: rgb(0, 140, 255);
     }
-    
-    .image-and-text2 h2{
+
+    .image-and-text2 h2 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 13px;
     }
@@ -226,28 +256,41 @@ body {
         background-color: rgb(36, 100, 160);
         top: 0px;
     }
-    
+
     #header i {
         margin-top: 1.2em;
         margin-left: 1em;
         color: white;
     }
-    
+
     #side-menu {
+        top: 0;
         position: fixed;
         z-index: 10000;
-        width: 28vw;
+        width: 29vw;
         height: 100vh;
         background-color: rgb(36, 100, 160);
         visibility: hidden;
     }
-    
+
     #side-menu i {
         margin-top: 1em;
         margin-left: 1em;
         color: white;
     }
-    
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent dark background */
+        display: none;
+        /* By default hidden */
+    }
+
     #h1-menu {
         margin-top: 1em;
         margin-left: 1em;
@@ -255,7 +298,7 @@ body {
         font-size: 24px;
         font-family: Arial, Helvetica, sans-serif;
     }
-    
+
     #h1-menu1 {
         margin-top: 1em;
         margin-left: 1em;
@@ -263,7 +306,7 @@ body {
         font-size: 24px;
         font-family: Arial, Helvetica, sans-serif;
     }
-    
+
     #h1-menu2 {
         margin-top: 1em;
         margin-left: 1em;
@@ -271,7 +314,7 @@ body {
         font-size: 24px;
         font-family: Arial, Helvetica, sans-serif;
     }
-    
+
     #h1-menu3 {
         margin-top: 1em;
         margin-left: 1em;
@@ -280,24 +323,48 @@ body {
         font-family: Arial, Helvetica, sans-serif;
     }
 
+    #h1-menu4 {
+        margin-top: 1em;
+        margin-left: 1em;
+        color: white;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #login {
+        margin-top: 1em;
+        margin-left: 1em;
+        color: rgb(0, 140, 255);
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #login {
+        margin-top: 1em;
+        margin-left: 1em;
+        color: rgb(0, 140, 255);
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
     #telef {
-        margin-top: 43em;
+        margin-top: 40em;
         margin-left: 1em;
         color: white;
         font-size: 12px;
         font-family: Arial, Helvetica, sans-serif;
     }
-    
+
     a {
         text-decoration: none;
         color: inherit;
         font-size: 20px;
     }
-    
+
     a:hover {
         color: rgb(0, 0, 0);
     }
-    
+
     .image-and-text {
         margin-top: 8em;
         width: 100%;
@@ -305,7 +372,7 @@ body {
         display: flex;
         align-items: center;
     }
-    
+
     .text-image {
         flex: 1;
         margin: 0px 20px;
@@ -330,23 +397,23 @@ body {
 
     .image-and-text h1 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
         color: rgb(0, 140, 255);
     }
 
     .image-and-text .text-image h2 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .image-and-text2 {
-        margin-top: 16em;
+        margin-top: 12em;
         width: 100%;
         height: 30vw;
         display: flex;
         align-items: center;
-        margin-bottom: 5em;
+        margin-bottom: 9em;
     }
 
     .text-image-below {
@@ -373,14 +440,14 @@ body {
 
     .image-and-text2 h1 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 16px;
+        font-size: 17px;
         font-weight: bold;
         color: rgb(0, 140, 255);
     }
 
     .image-and-text2 h2 {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .footer {
@@ -448,6 +515,18 @@ body {
         margin-top: 1em;
         margin-left: 1em;
         color: white;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent dark background */
+        display: none;
+        /* By default hidden */
     }
     
     #h1-menu {
@@ -647,6 +726,18 @@ body {
         margin-left: 1em;
         color: white;
     }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent dark background */
+        display: none;
+        /* By default hidden */
+    }
     
     #h1-menu {
         margin-top: 1em;
@@ -841,6 +932,18 @@ body {
         height: 100vh;
         background-color: rgb(36, 100, 160);
         visibility: hidden;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent dark background */
+        display: none;
+        /* By default hidden */
     }
     
     #side-menu i {

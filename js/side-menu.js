@@ -6,6 +6,7 @@ function initializeMenu() {
     SIDE_MENU_ICON.addEventListener("click", hideSideMenu);
 
     const SIDE_MENU = document.getElementById("side-menu");
+    const OVERLAY = document.getElementById("overlay");
 
     document.addEventListener("click", function(event) {
         const isClickInsideMenu = SIDE_MENU.contains(event.target);
@@ -14,16 +15,16 @@ function initializeMenu() {
             hideSideMenu();
         }
     });
-}
 
-function showHideMenu() {
-    const SIDE_MENU = document.getElementById("side-menu");
-    SIDE_MENU.style.visibility = "visible";
-}
+    function showHideMenu() {
+        SIDE_MENU.style.visibility = "visible";
+        OVERLAY.style.display = "block"; // Mostrar la capa de fondo
+    }
 
-function hideSideMenu() {
-    const SIDE_MENU = document.getElementById("side-menu");
-    SIDE_MENU.style.visibility = "hidden";
+    function hideSideMenu() {
+        SIDE_MENU.style.visibility = "hidden";
+        OVERLAY.style.display = "none"; // Ocultar la capa de fondo
+    }
 }
 
 initializeMenu();
