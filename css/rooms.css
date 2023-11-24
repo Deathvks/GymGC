@@ -30,9 +30,9 @@ body {
     }
 
     #side-menu {
+        border-radius: 13px;
         transition: left 0.3s ease;
         top: 0;
-        transition: left 0.3s ease;
         position: fixed;
         z-index: 10000;
         width: 40%;
@@ -40,11 +40,10 @@ body {
         background-color: rgb(36, 100, 160);
         visibility: hidden;
         max-width: 350px;
-        top: 0;
         opacity: 0;
         transition: visibility 0s, opacity 0.3s ease;
     }
-
+    
     #side-menu.visible {
         visibility: visible;
         opacity: 1;
@@ -101,24 +100,16 @@ body {
         font-family: Arial, Helvetica, sans-serif;
     }
 
-    #h1-menu4 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
-        font-size: 15px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
     #login {
-        margin-top: 1em;
-        margin-left: 1em;
+        margin: 20px 20px;
+        float: right;
         color: rgb(0, 140, 255);
         font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
     }
 
     #telef {
-        margin-top: 48em;
+        margin-top: 42em;
         margin-left: 1em;
         color: white;
         font-size: 12px;
@@ -274,6 +265,7 @@ body {
     }
 
     #side-menu {
+        border-radius: 13px;
         transition: left 0.3s ease;
         top: 0;
         position: fixed;
@@ -282,8 +274,6 @@ body {
         height: 100vh;
         background-color: rgb(36, 100, 160);
         visibility: hidden;
-        max-width: 350px;
-        top: 0;
         opacity: 0;
         transition: visibility 0s, opacity 0.3s ease;
     }
@@ -336,39 +326,23 @@ body {
     }
 
     #h1-menu3 {
-        margin-top: 1em;
-        margin-left: 1em;
+        margin-top: 1.3em;
+        margin-left: 1.2em;
         color: white;
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #h1-menu4 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
-        font-size: 24px;
+        font-size: 20px;
         font-family: Arial, Helvetica, sans-serif;
     }
 
     #login {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: rgb(0, 140, 255);
-        font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #login {
-        margin-top: 1em;
-        margin-left: 1em;
+        margin: 14px 25px;
+        float: right;
         color: rgb(0, 140, 255);
         font-size: 24px;
         font-family: Arial, Helvetica, sans-serif;
     }
 
     #telef {
-        margin-top: 40em;
+        margin-top: 35em;
         margin-left: 1em;
         color: white;
         font-size: 12px;
@@ -523,15 +497,15 @@ body {
     }
     
     #side-menu {
+        border-radius: 13px;
         transition: left 0.3s ease;
+        top: 0;
         position: fixed;
         z-index: 10000;
         width: 25vw;
         height: 100vh;
         background-color: rgb(36, 100, 160);
         visibility: hidden;
-        max-width: 350px;
-        top: 0;
         opacity: 0;
         transition: visibility 0s, opacity 0.3s ease;
     }
@@ -591,8 +565,16 @@ body {
         font-family: Arial, Helvetica, sans-serif;
     }
 
+    #login {
+        margin: 14px 25px;
+        float: right;
+        color: rgb(0, 140, 255);
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
     #telef {
-        margin-top: 37em;
+        margin-top: 26em;
         margin-left: 1em;
         color: white;
         font-size: 15px;
@@ -743,15 +725,15 @@ body {
     }
     
     #side-menu {
+        border-radius: 13px;
         transition: left 0.3s ease;
+        top: 0;
         position: fixed;
         z-index: 10000;
         width: 25vw;
         height: 100vh;
         background-color: rgb(36, 100, 160);
         visibility: hidden;
-        max-width: 350px;
-        top: 0;
         opacity: 0;
         transition: visibility 0s, opacity 0.3s ease;
     }
@@ -811,8 +793,16 @@ body {
         font-family: Arial, Helvetica, sans-serif;
     }
 
+    #login {
+        margin: 14px 25px;
+        float: right;
+        color: rgb(0, 140, 255);
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
     #telef {
-        margin-top: 30em;
+        margin-top: 21em;
         margin-left: 1em;
         color: white;
         font-size: 18px;
@@ -966,6 +956,7 @@ body {
     }
     
     #side-menu {
+        border-radius: 13px;
         transition: left 0.3s ease;
         position: fixed;
         z-index: 10000;
@@ -1030,6 +1021,14 @@ body {
         margin-top: 1em;
         margin-left: 1em;
         color: white;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #login {
+        margin: 14px 25px;
+        float: right;
+        color: rgb(0, 140, 255);
         font-size: 24px;
         font-family: Arial, Helvetica, sans-serif;
     }
