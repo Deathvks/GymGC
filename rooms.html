@@ -16,6 +16,16 @@
         <h1 id="login"><a href="form.html">REGISTRARSE</a></h1>
     </div>
 
+    <script>
+        window.onload = function () {
+          // Verificar el estado de la validación
+          if (localStorage.getItem('validation') === 'valid') {
+            // Cambiar el texto del elemento h1
+            document.querySelector('h1').innerText = 'Registrado';
+          }
+        }
+      </script>
+
     <div id="side-menu">
         <i class="fa-solid fa-caret-down" id="side-menu-icon"></i>
         <h1 id="h1-menu2"><a href="index.html">Volver</a></h1>
@@ -64,6 +74,8 @@
 
     <script src="https://kit.fontawesome.com/abeb2ec600.js" crossorigin="anonymous"></script>
     <script src="js/side-menu.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
