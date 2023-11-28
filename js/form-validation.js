@@ -49,7 +49,7 @@ LOGIN_FORM.addEventListener("submit", function(event) {
     // Change the h1 text to "Registered"
     localStorage.setItem('validation', 'valid');
     document.getElementById("login").innerText = `¡Hola, ${userEntered}!`;
-    document.getElementById("login").style.textAlign = 'center'; // Add this line to center the text  
+    document.getElementById("login").style.textAlign = 'center'; // Center the text  
 
     // Redirect after a while
     setTimeout(() => {
