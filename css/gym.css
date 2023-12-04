@@ -142,6 +142,7 @@ a:hover {
 .text-image {
     flex: 1;
     margin: 0px 20px;
+    text-align: center;
 }
 
 #image-and-text img {
@@ -270,7 +271,6 @@ a:hover {
     height: 100%;
     text-align: center;
     flex: 1;
-
 }
 
 .footer img {
@@ -338,7 +338,7 @@ a:hover {
 
     .text-image {
         margin-left: 4em;
-        justify-content: left;
+        text-align: justify;
     }
 
     .img-gym {
@@ -360,8 +360,8 @@ a:hover {
     }
 
     .text-image-below {
-        justify-content: left;
         margin-left: 4em;
+        text-align: justify;
     }
 
     .img-gym2 {
@@ -385,133 +385,49 @@ a:hover {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    #header {
-        width: 100vw;
-        height: 56px;
-        position: fixed;
-        background-color: rgb(36, 100, 160);
-        top: 0px;
-    }
-
-    #header i {
-        margin-top: 1.2em;
-        margin-left: 1em;
-        color: white;
-    }
 
     #side-menu {
-        border-radius: 13px;
-        transition: left 0.3s ease;
-        top: 0;
-        position: fixed;
-        z-index: 10000;
         width: 25vw;
         height: 100vh;
-        background-color: rgb(36, 100, 160);
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0s, opacity 0.3s ease;
-    }
-
-    #side-menu.visible {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    #side-menu i {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
-    }
-
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Semi-transparent dark background */
-        display: none;
-        /* By default hidden */
     }
 
     #h1-menu {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #h1-menu1 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #h1-menu2 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #h1-menu3 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #h1-menu4 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: rgb(0, 140, 255);
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #login {
         margin: 14px 25px;
-        float: right;
-        color: rgb(0, 140, 255);
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #telef {
         margin-top: 26em;
-        margin-left: 1em;
-        color: white;
         font-size: 15px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    a:hover {
-        color: rgb(0, 0, 0);
     }
 
     #image-and-text {
+        flex-direction: row;
         margin-top: 12em;
-        width: 100%;
-        height: 30vw;
-        display: flex;
         align-items: center;
     }
 
     .text-image {
-        flex: 1;
-        margin: 0px 20px;
         text-align: justify;
         margin-left: 4em;
     }
@@ -519,9 +435,6 @@ a:hover {
     #image-and-text img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-        border-radius: 5px;
     }
 
     .img-gym {
@@ -531,39 +444,23 @@ a:hover {
     }
 
     #image-and-text h1 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 30px;
-        font-weight: bold;
-        color: rgb(0, 140, 255);
     }
 
     #image-and-text .text-image h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 26px;
     }
 
     #image-and-text2 {
         margin-top: 16em;
-        width: 100%;
-        height: 30vw;
-        display: flex;
-        align-items: center;
-        margin-bottom: 9em;
+        flex-direction: row;
+        margin-bottom: 15em;
     }
 
     .text-image-below {
         flex: 1;
-        margin: 0px 20px;
         text-align: justify;
         margin-left: 4em;
-    }
-
-    #image-and-text2 img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-        border-radius: 5px;
     }
 
     .img-gym2 {
@@ -573,237 +470,82 @@ a:hover {
     }
 
     #image-and-text2 h1 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 30px;
-        font-weight: bold;
-        color: rgb(0, 140, 255);
+        font-size: 25px;
     }
 
     #image-and-text2 h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 26px;
-    }
-
-    .container-all {
-        margin-top: 20em;
-        margin-bottom: 5em;
-    }
-
-    .container {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
-
-    .text-gallery h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 35px;
-        text-align: center;
-        color: rgb(0, 140, 255);
+        font-size: 22px;
     }
 
     .image-gallery img {
-        margin-top: 2em;
-        object-fit: cover;
         width: 35em;
         height: 30em;
-        box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-        border-radius: 5px;
-    }
-
-    .footer {
-        padding: 0.5em;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: row;
-        background: rgb(2, 0, 36);
-        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(13, 13, 108, 1) 0%, rgba(0, 212, 255, 1) 100%);
-    }
-
-    .footer-text {
-        width: 50vw;
-        flex-direction: row;
-        margin: 0px 10px;
-        text-align: center;
     }
 
     .footer h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 28px;
-    }
-
-    .footer-img {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        flex: 1;
-
-    }
-
-    .footer img {
-        width: 12vw;
-        height: 12vw;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    #header {
-        width: 100vw;
-        height: 56px;
-        position: fixed;
-        background-color: rgb(36, 100, 160);
-        top: 0px;
-    }
-
-    #header i {
-        margin-top: 1.2em;
-        margin-left: 1em;
-        color: white;
-    }
 
     #side-menu {
-        border-radius: 13px;
-        transition: left 0.3s ease;
-        top: 0;
-        position: fixed;
-        z-index: 10000;
         width: 25vw;
         height: 100vh;
-        background-color: rgb(36, 100, 160);
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0s, opacity 0.3s ease;
-    }
-
-    #side-menu.visible {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    #side-menu i {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
-    }
-
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Semi-transparent dark background */
-        display: none;
-        /* By default hidden */
     }
 
     #h1-menu {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #h1-menu1 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #h1-menu2 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #h1-menu3 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #h1-menu4 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: rgb(0, 140, 255);
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #login {
         margin: 14px 25px;
-        float: right;
-        color: rgb(0, 140, 255);
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #telef {
         margin-top: 21em;
         margin-left: 1em;
-        color: white;
         font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    a:hover {
-        color: rgb(0, 0, 0);
     }
 
     #image-and-text {
         margin-top: 12em;
-        width: 100%;
-        height: 30vw;
-        display: flex;
-        align-items: center;
+        flex-direction: row;
     }
 
     .text-image {
-        flex: 1;
-        margin: 0px 20px;
         text-align: justify;
         margin-left: 4em;
     }
 
-    #image-and-text img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-        border-radius: 5px;
-    }
-
     .img-gym {
-        width: 40vw;
-        height: 35vw;
-        max-width: 1024px;
-        margin: 0px 40px;
+        width: 45vw;
+        height: 40vw;
     }
 
     #image-and-text h1 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 36px;
-        font-weight: bold;
-        color: rgb(0, 140, 255);
     }
 
     #image-and-text .text-image h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 28px;
     }
 
@@ -811,225 +553,79 @@ a:hover {
         margin-top: 16em;
         width: 100%;
         height: 30vw;
-        display: flex;
-        align-items: center;
+        flex-direction: row;
         margin-bottom: 9em;
     }
 
     .text-image-below {
-        flex: 1;
-        margin: 0px 20px;
         text-align: justify;
         margin-left: 4em;
     }
 
-    #image-and-text2 img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-        border-radius: 5px;
-    }
-
     .img-gym2 {
-        width: 40vw;
-        height: 35vw;
-        max-width: 1024px;
-        margin: 0px 40px;
+        width: 45vw;
+        height: 40vw;
     }
 
     #image-and-text2 h1 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 36px;
-        font-weight: bold;
-        color: rgb(0, 140, 255);
+        font-size: 30px;
     }
 
     #image-and-text2 h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 28px;
     }
 
     .container-all {
         margin-top: 20em;
-        margin-bottom: 5em;
-    }
-
-    .container {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
-
-    .text-gallery h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 35px;
-        text-align: center;
-        color: rgb(0, 140, 255);
     }
 
     .image-gallery img {
-        margin-top: 2em;
-        object-fit: cover;
         width: 35em;
         height: 30em;
-        box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-        border-radius: 5px;
-    }
-
-    .footer {
-        padding: 0.5em;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: row;
-        background: rgb(2, 0, 36);
-        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(13, 13, 108, 1) 0%, rgba(0, 212, 255, 1) 100%);
-    }
-
-    .footer-text {
-        width: 50vw;
-        flex-direction: row;
-        margin: 0px 10px;
-        text-align: center;
     }
 
     .footer h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 28px;
-    }
-
-    .footer-img {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        flex: 1;
-
-    }
-
-    .footer img {
-        width: 12vw;
-        height: 12vw;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    #header {
-        width: 100vw;
-        height: 56px;
-        position: fixed;
-        background-color: rgb(36, 100, 160);
-        top: 0px;
-    }
-
-    #header i {
-        margin-top: 1.2em;
-        margin-left: 1em;
-        color: white;
-    }
 
     #side-menu {
-        border-radius: 13px;
-        transition: left 0.3s ease;
-        position: fixed;
-        z-index: 10000;
         width: 25vw;
         height: 100vh;
-        background-color: rgb(36, 100, 160);
-        visibility: hidden;
         max-width: 350px;
-        top: 0;
-        opacity: 0;
-        transition: visibility 0s, opacity 0.3s ease;
-    }
-
-    #side-menu.visible {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    #side-menu i {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
-    }
-
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        /* Semi-transparent dark background */
-        display: none;
-        /* By default hidden */
     }
 
     #h1-menu {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #h1-menu1 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #h1-menu2 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #h1-menu3 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: white;
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #h1-menu4 {
-        margin-top: 1em;
-        margin-left: 1em;
-        color: rgb(0, 140, 255);
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #login {
         margin: 14px 25px;
-        float: right;
-        color: rgb(0, 140, 255);
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     #telef {
         margin-top: 20em;
-        margin-left: 1em;
-        color: white;
         font-size: 24px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    a:hover {
-        color: rgb(0, 0, 0);
     }
 
     #image-and-text {
@@ -1037,43 +633,24 @@ a:hover {
         position: relative;
         top: 0;
         margin-top: 12em;
-        width: 100%;
-        height: 30vw;
-        display: flex;
-        align-items: center;
+        flex-direction: row;
     }
 
     .text-image {
-        flex: 1;
-        margin: 0px 20px;
         text-align: justify;
         margin-left: 4em;
-    }
-
-    #image-and-text img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-        border-radius: 5px;
     }
 
     .img-gym {
         width: 40vw;
         height: 35vw;
-        max-width: 1024px;
-        margin: 0px 40px;
     }
 
     #image-and-text h1 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 36px;
-        font-weight: bold;
-        color: rgb(0, 140, 255);
     }
 
     #image-and-text .text-image h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 28px;
     }
 
@@ -1082,107 +659,40 @@ a:hover {
         position: relative;
         top: 0;
         margin-top: 16em;
-        width: 100%;
-        height: 30vw;
-        display: flex;
-        align-items: center;
+        flex-direction: row;
         margin-bottom: 9em;
     }
 
     .text-image-below {
         flex: 1;
-        margin: 0px 20px;
         text-align: justify;
         margin-left: 4em;
-    }
-
-    #image-and-text2 img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-        border-radius: 5px;
     }
 
     .img-gym2 {
         width: 40vw;
         height: 35vw;
-        max-width: 1024px;
-        margin: 0px 40px;
     }
 
     #image-and-text2 h1 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 36px;
-        font-weight: bold;
-        color: rgb(0, 140, 255);
     }
 
     #image-and-text2 h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 28px;
     }
 
     .container-all {
         margin-top: 20em;
-        margin-bottom: 5em;
-    }
-
-    .container {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
-
-    .text-gallery h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 35px;
-        text-align: center;
-        color: rgb(0, 140, 255);
     }
 
     .image-gallery img {
-        margin-top: 2em;
-        object-fit: cover;
         width: 35em;
         height: 30em;
-        box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-        border-radius: 5px;
-    }
-
-    .footer {
-        padding: 0.5em;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: row;
-        background: rgb(2, 0, 36);
-        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(13, 13, 108, 1) 0%, rgba(0, 212, 255, 1) 100%);
-    }
-
-    .footer-text {
-        width: 50vw;
-        flex-direction: row;
-        margin: 0px 10px;
-        text-align: center;
     }
 
     .footer h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 28px;
-    }
-
-    .footer-img {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        flex: 1;
-
-    }
-
-    .footer img {
-        width: 12vw;
-        height: 12vw;
     }
 
 }
