@@ -4,10 +4,26 @@ let gym = [
   },
 ];
 
+function saveGymToLocalStorage() {
+  localStorage.setItem('gym', JSON.stringify(gym));
+}
+
+function loadGymFromLocalStorage() {
+  if (localStorage.getItem('gym')) {
+    gym = JSON.parse(localStorage.getItem('gym'));
+  }
+}
+
+window.addEventListener('load', function() {
+  loadGymFromLocalStorage();
+  showSuggestions();
+});
+
 function initializeGym() {
   const GYM_FORM = document.getElementById("gym-form");
   GYM_FORM.addEventListener("submit", addSuggestions);
 
+  loadGymFromLocalStorage();
   showSuggestions();
 }
 
@@ -31,6 +47,7 @@ function addSuggestions(event) {
     document.getElementById("error-whatever").classList.remove("d-none");
   }
 
+  saveGymToLocalStorage();
   showSuggestions();
 }
 
@@ -46,6 +63,7 @@ function showSuggestions() {
 function deleteSuggestions(gymId) {
   gym.splice(gymId, 1);
 
+  saveGymToLocalStorage();
   showSuggestions();
 }
 
@@ -75,11 +93,13 @@ function saveEdit() {
     gym[gymId].whatever = newValue;
     const modal = bootstrap.Modal.getInstance(document.getElementById('editModal'));
     modal.hide();
+    saveGymToLocalStorage();
     showSuggestions();
   } else {
     alert('Por favor ingrese un valor válido.');
   }
 }
+
 
 initializeGym();
 
