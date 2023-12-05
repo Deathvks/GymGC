@@ -37,6 +37,10 @@ body {
     margin-top: 1em;
 }
 
+.navbar {
+    background-color: rgb(36, 100, 160) !important;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     

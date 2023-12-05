@@ -40,7 +40,7 @@ function showSuggestions() {
   GYM_LIST.innerHTML = "";
 
   for (let i = 0; i < gym.length; i++)
-    GYM_LIST.innerHTML += `<li>${gym[i].whatever}<button class="bt"onclick="deleteSuggestions(${i})">BORRAR</button></li>`;
+    GYM_LIST.innerHTML += `<li>${gym[i].whatever}<button class="bt" onclick="deleteSuggestions(${i})">BORRAR</button><button class="bt" onclick="editSuggestions(${i})">EDITAR</button></li><br>`;
 }
 
 function deleteSuggestions(gymId) {
@@ -49,13 +49,45 @@ function deleteSuggestions(gymId) {
   showSuggestions();
 }
 
+function editSuggestions(gymId) {
+  const editInput = document.getElementById('editInput');
+  editInput.value = gym[gymId].whatever;
+  const modal = new bootstrap.Modal(document.getElementById('editModal'));
+  modal.show();
+  // Save the gymId to use it in the saveEdit function
+  document.getElementById('editModal').dataset.gymId = gymId;
+
+  // Listen to the 'keydown' event for the text field
+  editInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Avoid default Enter behavior (like submitting a form)
+      saveEdit(); // Call the save Edit() function when you press Enter
+    }
+  });
+}
+
+function saveEdit() {
+  const editInput = document.getElementById('editInput');
+  const newValue = editInput.value;
+  const gymId = document.getElementById('editModal').dataset.gymId; // We get the saved gymId
+
+  if (newValue.trim() !== '') {
+    gym[gymId].whatever = newValue;
+    const modal = bootstrap.Modal.getInstance(document.getElementById('editModal'));
+    modal.hide();
+    showSuggestions();
+  } else {
+    alert('Por favor ingrese un valor válido.');
+  }
+}
+
 initializeGym();
 
 function checkVerify() {
-  // Obtener el elemento del checkbox
+  // Get the checkbox item
   var checkbox = document.querySelector('input[name="remember"]');
 
-  // Verificar si el checkbox está marcado al enviar el formulario
+  // Check if the checkbox is checked when submitting the form
   function validarFormulario(event) {
     if (!checkbox.checked) {
       document.getElementById("error-check").classList.remove("d-none");
@@ -65,8 +97,8 @@ function checkVerify() {
     }
   }
 
-  // Asignar la función de validación al evento 'submit' del formulario
-  var formulario = document.querySelector("form"); // Asegúrate de reemplazar 'form' con el ID o selector de tu formulario
+  // Assign the validation function to the 'submit' event of the form
+  var formulario = document.querySelector("form");
   formulario.addEventListener("submit", validarFormulario);
 }
 

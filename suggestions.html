@@ -40,6 +40,12 @@
         </div>
     </nav>
 
+    <style>
+        .navbar {
+            background-color: rgb(36, 100, 160) !important;
+        }
+    </style>
+
     <div id="alert">
         <div class="alert alert-warning">
             <div id="close"> <i class="fa-solid fa-xmark"></i></div>
@@ -51,7 +57,7 @@
     <div class="container">
         <div class="row">
             <div>
-                <p class="left-side">Recomienda cualquier tipo de cosa que quieras que esté en nuestro gimnasio y que no
+                <p class="left-side-info">Recomienda cualquier tipo de sugerencia que quieras que esté en nuestro gimnasio y que no
                     hayas leído que esté.
                 </p>
             </div>
@@ -60,7 +66,7 @@
                 <div class="left-side">
                     <form id="gym-form" action="suggestions.html">
                         <div class="mb-3 mt-3">
-                            <label for="whatever" class="form-label">Escribe lo que se te ocurra:</label>
+                            <label for="whatever" class="form-label">Escribe lo que se te ocurra que pueda ayudarnos a mejorar:</label>
                             <textarea id="whatever" name="whatever" style="width: 100%;" name="" id="" cols="30" rows="8" placeholder="Escribe cualquier sugerencia"></textarea>
                             <div id="error-whatever" class="text-danger d-none">El campo de sugerencias está vacío. Por favor, escriba algo.</div>
                         </div>
@@ -84,6 +90,25 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editModalLabel">Editar tu sugerencia</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <input type="text" class="form-control" id="editInput" placeholder="Nuevo valor">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary" onclick="saveEdit()">Guardar Cambios</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/gym-manager.js"></script>

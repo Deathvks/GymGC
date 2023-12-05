@@ -13,10 +13,20 @@ body {
 }
 
 .bt {
-    background-color: rgb(132, 200, 255);
+    background-color: rgb(97, 163, 224);
     margin-left: 1em;
     box-shadow: 0 0 6px rgba(0, 0, 0, .5);
     border-radius: 5px;
+}
+
+.left-side-info {
+    font-weight: bold;
+    text-align: center;
+    border-style: inset;
+    padding: 1em;
+    border-radius: 12px;
+    background-color: rgb(0, 140, 255);
+    margin-top: 1em;
 }
 
 .left-side {
