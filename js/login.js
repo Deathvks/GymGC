@@ -1,6 +1,6 @@
 function logIn() {
   window.onload = function() {
-    // Check validation status
+    // Check if validation status exists in LocalStorage
     const validationStatus = localStorage.getItem('validation');
     if (validationStatus === 'valid') {
       // Change the text of the h1 element
@@ -12,8 +12,11 @@ function logIn() {
   };
 
   window.addEventListener('beforeunload', function() {
-    // Store validation status in LocalStorage
-    localStorage.setItem('validation', 'valid');
+    // Store validation status in LocalStorage only if it's set to 'valid'
+    const validationStatus = localStorage.getItem('validation');
+    if (validationStatus === 'valid') {
+      localStorage.setItem('validation', 'valid');
+    }
   });
 }
 
