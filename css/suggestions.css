@@ -38,6 +38,7 @@ body {
 }
 
 #alert {
+    text-align: center;
     margin: 6px;
     padding: 6px;
     border: 6px;

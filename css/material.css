@@ -113,6 +113,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#logout {
+    visibility: hidden;
+    margin-top: 1em;
+    margin-left: 1em;
+    color: rgb(0, 140, 255);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #telef {
     margin-top: 42em;
     margin-left: 1em;
@@ -180,7 +189,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 15em;
+    margin-bottom: 20em;
 }
 
 .text-image-below {
@@ -295,6 +304,10 @@ a:hover {
         font-size: 24px;
     }
 
+    #logout {
+        font-size: 24px;
+    }
+
     #telef {
         margin-top: 35em;
         color: white;
@@ -386,6 +399,10 @@ a:hover {
 
     #login {
         margin: 14px 25px;
+        font-size: 24px;
+    }
+
+    #logout {
         font-size: 24px;
     }
 
@@ -493,6 +510,10 @@ a:hover {
         font-size: 24px;
     }
 
+    #logout {
+        font-size: 24px;
+    }
+
     #telef {
         margin-top: 21em;
         margin-left: 1em;
@@ -584,6 +605,10 @@ a:hover {
 
     #login {
         margin: 14px 25px;
+        font-size: 24px;
+    }
+
+    #logout {
         font-size: 24px;
     }
 
