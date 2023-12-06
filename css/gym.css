@@ -13,7 +13,6 @@ body {
 }
 
 #header {
-    z-index: 20;
     width: 100%;
     height: 56px;
     position: fixed;
@@ -228,6 +227,7 @@ a:hover {
 }
 
 .container-all {
+    z-index: -1;
     position: relative;
     margin-top: 11em;
     margin-bottom: 5em;
