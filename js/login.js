@@ -27,7 +27,7 @@ document.getElementById('logout').addEventListener('click', function () {
   console.log("Validation status removed from localStorage");
 
   // Change the text of the h1 element
-  document.querySelector('h1').innerText = 'REGISTRARSE';
+  document.querySelector('h1').innerText = 'ENTRAR';
 
   document.querySelector('h1').addEventListener('mouseover', function () {
     this.style.textDecoration = 'underline';
