@@ -105,6 +105,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#h1-chat {
+    margin-top: 1em;
+    margin-left: 1em;
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #login {
     margin: 20px 20px;
     float: right;
@@ -299,6 +307,10 @@ a:hover {
 
     }
 
+    #h1-chat {
+        font-size: 24px;
+    }
+
     #login {
         margin: 14px 25px;
         font-size: 24px;
@@ -375,35 +387,6 @@ a:hover {
     #side-menu {
         width: 25vw;
         height: 100vh;
-    }
-
-    #h1-menu {
-        font-size: 24px;
-    }
-
-    #h1-menu1 {
-        font-size: 24px;
-    }
-
-    #h1-menu2 {
-        font-size: 24px;
-    }
-
-    #h1-menu3 {
-        font-size: 24px;
-    }
-
-    #h1-menu4 {
-        font-size: 24px;
-    }
-
-    #login {
-        margin: 14px 25px;
-        font-size: 24px;
-    }
-
-    #logout {
-        font-size: 24px;
     }
 
     #telef {
@@ -485,35 +468,6 @@ a:hover {
         height: 100vh;
     }
 
-    #h1-menu {
-        font-size: 24px;
-    }
-
-    #h1-menu1 {
-        font-size: 24px;
-    }
-
-    #h1-menu2 {
-        font-size: 24px;
-    }
-
-    #h1-menu3 {
-        font-size: 24px;
-    }
-
-    #h1-menu4 {
-        font-size: 24px;
-    }
-
-    #login {
-        margin: 14px 25px;
-        font-size: 24px;
-    }
-
-    #logout {
-        font-size: 24px;
-    }
-
     #telef {
         margin-top: 21em;
         margin-left: 1em;
@@ -583,37 +537,8 @@ a:hover {
         max-width: 350px;
     }
 
-    #h1-menu {
-        font-size: 24px;
-    }
-
-    #h1-menu1 {
-        font-size: 24px;
-    }
-
-    #h1-menu2 {
-        font-size: 24px;
-    }
-
-    #h1-menu3 {
-        font-size: 24px;
-    }
-
-    #h1-menu4 {
-        font-size: 24px;
-    }
-
-    #login {
-        margin: 14px 25px;
-        font-size: 24px;
-    }
-
-    #logout {
-        font-size: 24px;
-    }
-
     #telef {
-        margin-top: 20em;
+        margin-top: 18em;
         font-size: 24px;
     }
 

@@ -1,18 +1,23 @@
 function logIn() {
   window.onload = function () {
-    // Check if validation status exists in LocalStorage
     const validationStatus = localStorage.getItem('validation');
+    const logoutStatus = localStorage.getItem('logout');
+    const loginText = document.getElementById('login');
+
     if (validationStatus === 'valid') {
-      // Change the text of the h1 element
-      document.querySelector('h1').innerText = 'REGISTRADO';
-      // Show element h1
+      loginText.innerText = 'REGISTRADO';
       document.getElementById('logout').style.visibility = 'visible';
       console.log("Logout button clicked");
+    } else if (logoutStatus === 'true') {
+      loginText.innerText = 'ENTRAR';
+      loginText.style.cursor = 'pointer'; // Hace que el texto sea un puntero al pasar por encima
+      loginText.addEventListener('click', function () {
+        window.location.href = "../form.html"; // Redirige al hacer clic en "ENTRAR"
+      });
     }
   };
 
   window.addEventListener('beforeunload', function () {
-    // Store validation status in LocalStorage only if it's set to 'valid'
     const validationStatus = localStorage.getItem('validation');
     if (validationStatus === 'valid') {
       localStorage.setItem('validation', 'valid');
@@ -20,26 +25,19 @@ function logIn() {
   });
 }
 
-// Click event on element h1 with id="logout"
 document.getElementById('logout').addEventListener('click', function () {
-  // Clean LocalStorage
   localStorage.removeItem('validation');
+  localStorage.setItem('logout', 'true');
   console.log("Validation status removed from localStorage");
 
-  // Change the text of the h1 element
-  document.querySelector('h1').innerText = 'ENTRAR';
-
-  document.querySelector('h1').addEventListener('mouseover', function () {
-    this.style.textDecoration = 'underline';
+  const loginText = document.getElementById('login');
+  loginText.innerText = 'ENTRAR';
+  loginText.style.cursor = 'pointer'; // Hace que el texto sea un puntero al pasar por encima
+  loginText.addEventListener('click', function () {
+    window.location.href = "../form.html"; // Redirige al hacer clic en "ENTRAR"
   });
 
-  document.querySelector('h1').addEventListener('mouseout', function () {
-    this.style.textDecoration = '';
-  });
-
-  // Hide element h1
   document.getElementById('logout').style.visibility = 'hidden';
-
 
   const PAGE = document.getElementById('login');
   PAGE.addEventListener('click', OTHER_PAGE);
