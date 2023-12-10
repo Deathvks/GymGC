@@ -40,8 +40,7 @@ function showAllMessages(snapshot) {
         const SENDER = VALUES[value].sender;
         const VALUE = VALUES[value].text;
 
-
-        SENT_MESSAGES.innerHTML += `<p>${SENDER}: ${VALUE}</p>`
+        SENT_MESSAGES.innerHTML += `<p>${SENDER}: ${VALUE}</p>`;
     }
 }
 
@@ -55,8 +54,13 @@ function addMessage(e) {
     const NEW_MESSAGE = {
         sender: MESSAGE_SENDER,
         text: MESSAGE_TEXT,
-    }
+    };
     push(MESSAGES_REF, NEW_MESSAGE);
+
+    // Limpiar los campos de entrada después de enviar el mensaje
+    e.target["message-sender"].value = "";
+    e.target["message-text"].value = "";
 }
+
 
 initialize();
