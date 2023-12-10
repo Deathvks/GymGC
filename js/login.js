@@ -7,12 +7,13 @@ function logIn() {
     if (validationStatus === 'valid') {
       loginText.innerText = 'REGISTRADO';
       document.getElementById('logout').style.visibility = 'visible';
+      document.getElementById('logout').style.cursor = 'pointer';
       console.log("Logout button clicked");
     } else if (logoutStatus === 'true') {
       loginText.innerText = 'ENTRAR';
-      loginText.style.cursor = 'pointer'; // Hace que el texto sea un puntero al pasar por encima
+      loginText.style.cursor = 'pointer'; // Makes text a pointer on hover
       loginText.addEventListener('click', function () {
-        window.location.href = "../form.html"; // Redirige al hacer clic en "ENTRAR"
+        window.location.href = "../form.html"; // Redirects when clicking "ENTER"
       });
     }
   };
@@ -32,9 +33,9 @@ document.getElementById('logout').addEventListener('click', function () {
 
   const loginText = document.getElementById('login');
   loginText.innerText = 'ENTRAR';
-  loginText.style.cursor = 'pointer'; // Hace que el texto sea un puntero al pasar por encima
+  loginText.style.cursor = 'pointer'; // Makes text a pointer on hover
   loginText.addEventListener('click', function () {
-    window.location.href = "../form.html"; // Redirige al hacer clic en "ENTRAR"
+    window.location.href = "../form.html"; // Redirect when clicking "ENTER"
   });
 
   document.getElementById('logout').style.visibility = 'hidden';
