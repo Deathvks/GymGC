@@ -12,53 +12,50 @@ body {
     background-attachment: fixed;
 }
 
-.navbar {
-    background-color: rgb(36, 100, 160) !important;
-    margin-bottom: 2em;
-}
-
-#form-message { 
+#form-message {
+    padding: 1em;
+    border-radius: 12px;
+    display: flex;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    background-color: white;
     display: flex;
     flex-direction: column;
     max-width: 300px;
     margin: 0 auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
     margin-bottom: 2em;
-}
-
-input[type="text"],
-button {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
 }
 
 input[type="text"]:focus {
     outline: none;
-    border-color: rgb(36, 100, 160);
-    box-shadow: 0 0 5px rgba(106, 157, 255, 0.5);
+    border-color: #6a9dff;
+    box-shadow: 0 0 5px rgba(36, 100, 160);
 }
 
-button {
-    background-color: rgb(36, 100, 160);
-    color: white;
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.custom-button {
+    padding: 10px 20px;
     border: none;
+    border-radius: 5px;
+    background-color: rgb(36, 100, 160);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    color: white;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: rgb(59, 94, 128);
+.custom-button:hover {
+    background-color: rgb(34, 59, 82);
 }
 
-button {
-    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
-    border-radius: 5px;
+.custom-button:active {
+    background-color: rgb(0, 0, 0); /* Cambiar a azul cuando se presiona */
 }
 
 #sent-messages {
@@ -73,6 +70,37 @@ button {
     flex-direction: column;
     margin-bottom: 3em;
 }
+
+.navbar {
+    background-color: rgb(36, 100, 160) !important;
+    margin-bottom: 2em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #form-message {
+    opacity: 0;
+  }
+  
+  .fade-in {
+    animation: fadeInAnimation 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {}
