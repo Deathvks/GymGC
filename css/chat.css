@@ -55,7 +55,7 @@ input[type="text"] {
 }
 
 .custom-button:active {
-    background-color: rgb(0, 0, 0); /* Cambiar a azul cuando se presiona */
+    background-color: rgb(0, 0, 0);
 }
 
 #sent-messages {
@@ -89,6 +89,16 @@ input[type="text"] {
   
   .fade-in {
     animation: fadeInAnimation 1s ease-in-out forwards;
+  }
+
+  #error-sender {
+    margin-top: -13px;
+    margin-bottom: 1em;
+  }
+
+  #error-message {
+    margin-top: -14px;
+    margin-bottom: 1em;
   }
   
   @keyframes fadeInAnimation {

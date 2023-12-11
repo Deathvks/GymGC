@@ -50,6 +50,20 @@ function addMessage(e) {
     const MESSAGE_SENDER = e.target["message-sender"].value;
     const MESSAGE_TEXT = e.target["message-text"].value;
 
+    if (MESSAGE_SENDER.trim() === "") {
+        document.getElementById("error-sender").classList.remove("d-none");
+        return; // Detener la función si el campo está vacío
+    } else {
+        document.getElementById("error-sender").classList.add("d-none");
+    }
+
+    if (MESSAGE_TEXT.trim() === "") {
+        document.getElementById("error-message").classList.remove("d-none");
+        return; // Detener la función si el campo está vacío
+    } else {
+        document.getElementById("error-message").classList.add("d-none");
+    }
+
     const MESSAGES_REF = ref(getDatabase(), "messages/");
     const NEW_MESSAGE = {
         sender: MESSAGE_SENDER,
@@ -61,6 +75,5 @@ function addMessage(e) {
     e.target["message-sender"].value = "";
     e.target["message-text"].value = "";
 }
-
 
 initialize();
