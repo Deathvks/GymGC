@@ -156,7 +156,7 @@ body {
     margin: 10% auto; /* Ajusta la posición vertical del pop-up */
     padding: 20px;
     border-radius: 8px; /* Bordes redondeados */
-    width: 30%; /* Anchura del pop-up */
+    width: 45%; /* Anchura del pop-up */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
 }
 
