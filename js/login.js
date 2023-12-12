@@ -8,12 +8,12 @@ function logIn() {
       loginText.innerText = 'REGISTRADO';
       document.getElementById('logout').style.visibility = 'visible';
       document.getElementById('logout').style.cursor = 'pointer';
-      console.log("Logout button clicked");
-    } else if (logoutStatus === 'true') {
+    } else if (logoutStatus === 'true' || !validationStatus) {
       loginText.innerText = 'ENTRAR';
-      loginText.style.cursor = 'pointer'; // Makes text a pointer on hover
+      loginText.style.cursor = 'pointer';
+      // Configurar el evento de clic aquí para redirigir a form.html
       loginText.addEventListener('click', function () {
-        window.location.href = "../form.html"; // Redirects when clicking "ENTER"
+        window.location.href = "../form.html";
       });
     }
   };
@@ -24,28 +24,42 @@ function logIn() {
       localStorage.setItem('validation', 'valid');
     }
   });
-}
 
-document.getElementById('logout').addEventListener('click', function () {
-  localStorage.removeItem('validation');
-  localStorage.setItem('logout', 'true');
-  console.log("Validation status removed from localStorage");
-
-  const loginText = document.getElementById('login');
-  loginText.innerText = 'ENTRAR';
-  loginText.style.cursor = 'pointer'; // Makes text a pointer on hover
-  loginText.addEventListener('click', function () {
-    window.location.href = "../form.html"; // Redirect when clicking "ENTER"
+  // Añadir evento de clic al botón de logout
+  document.getElementById('logout').addEventListener('click', function () {
+    // Mostrar el pop-up
+    document.getElementById('miPopup').style.display = 'block';
   });
 
-  document.getElementById('logout').style.visibility = 'hidden';
+  // Añadir la lógica del pop-up
+  var popup = document.getElementById("miPopup");
+  var span = document.getElementsByClassName("close")[0];
+  var buttonConfirm = document.getElementById("confirm");
+  var buttonCancel = document.getElementById("cancel");
 
-  const PAGE = document.getElementById('login');
-  PAGE.addEventListener('click', OTHER_PAGE);
-
-  function OTHER_PAGE() {
-    location.href = "../form.html";
+  span.onclick = function() {
+      popup.style.display = "none";
   }
-});
+
+  window.onclick = function(event) {
+      if (event.target == popup) {
+          popup.style.display = "none";
+      }
+  }
+
+  buttonConfirm.onclick = function() {
+      localStorage.removeItem('validation');
+      localStorage.setItem('logout', 'true');
+      document.getElementById('login').innerText = 'ENTRAR';
+      document.getElementById('logout').style.visibility = 'hidden';
+      popup.style.display = "none";
+  }
+
+
+
+  buttonCancel.onclick = function() {
+      popup.style.display = "none";
+  }
+}
 
 logIn();
